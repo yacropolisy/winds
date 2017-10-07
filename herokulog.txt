@@ -1,0 +1,101 @@
+2017-10-07T11:30:17.397313+00:00 app[web.1]: [a447784f-213a-4f12-baa4-97342a63a7ca]   Rendering home/index.html.erb within layouts/application
+2017-10-07T11:30:17.397962+00:00 app[web.1]: [a447784f-213a-4f12-baa4-97342a63a7ca]   Rendered home/index.html.erb within layouts/application (0.5ms)
+2017-10-07T11:30:17.399426+00:00 app[web.1]: [a447784f-213a-4f12-baa4-97342a63a7ca] Completed 200 OK in 2040ms (Views: 3.4ms)
+2017-10-07T11:30:17.680360+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=windsapp.herokuapp.com request_id=00c27204-3a68-43ff-b54b-bd80281a59c0 fwd="133.3.201.20" dyno=web.1 connect=1ms service=2ms status=200 bytes=143 protocol=https
+2017-10-07T11:30:21.156257+00:00 heroku[router]: at=info method=GET path="/board" host=windsapp.herokuapp.com request_id=a590b3e4-df98-4fc3-bba6-4696dd850f87 fwd="133.3.201.20" dyno=web.1 connect=1ms service=66ms status=200 bytes=1337 protocol=https
+2017-10-07T11:30:21.091033+00:00 app[web.1]: [a590b3e4-df98-4fc3-bba6-4696dd850f87] Started GET "/board" for 133.3.201.20 at 2017-10-07 11:30:21 +0000
+2017-10-07T11:30:21.092554+00:00 app[web.1]: [a590b3e4-df98-4fc3-bba6-4696dd850f87] Processing by HomeController#board as HTML
+2017-10-07T11:30:21.095789+00:00 app[web.1]: [a590b3e4-df98-4fc3-bba6-4696dd850f87]   Rendering home/board.html.erb within layouts/application
+2017-10-07T11:30:21.145768+00:00 app[web.1]: [a590b3e4-df98-4fc3-bba6-4696dd850f87]   [1m[36mPost Load (2.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY date DESC[0m
+2017-10-07T11:30:21.151948+00:00 app[web.1]: [a590b3e4-df98-4fc3-bba6-4696dd850f87]   Rendered home/board.html.erb within layouts/application (56.0ms)
+2017-10-07T11:30:21.153464+00:00 app[web.1]: [a590b3e4-df98-4fc3-bba6-4696dd850f87] Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 17.5ms)
+2017-10-07T11:30:21.130429+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=windsapp.herokuapp.com request_id=185d543f-a972-43cb-b742-25746d78249e fwd="133.3.201.20" dyno=web.1 connect=2ms service=3ms status=304 bytes=48 protocol=https
+2017-10-07T11:30:27.994101+00:00 app[web.1]: [3625e2fe-9e2d-4b09-9687-24681d556b00] Started GET "/home" for 133.3.201.20 at 2017-10-07 11:30:27 +0000
+2017-10-07T11:30:27.995137+00:00 app[web.1]: [3625e2fe-9e2d-4b09-9687-24681d556b00] Processing by HomeController#index as HTML
+2017-10-07T11:30:28.355627+00:00 app[web.1]: true
+2017-10-07T11:30:29.183990+00:00 heroku[router]: at=info method=GET path="/home" host=windsapp.herokuapp.com request_id=3625e2fe-9e2d-4b09-9687-24681d556b00 fwd="133.3.201.20" dyno=web.1 connect=1ms service=1190ms status=200 bytes=1397 protocol=https
+2017-10-07T11:30:29.162084+00:00 app[web.1]: "京都大学ウィンドサーフィン部 - 仲良くしましょう。"
+2017-10-07T11:30:29.179986+00:00 app[web.1]: [3625e2fe-9e2d-4b09-9687-24681d556b00]   Rendering home/index.html.erb within layouts/application
+2017-10-07T11:30:29.180276+00:00 app[web.1]: [3625e2fe-9e2d-4b09-9687-24681d556b00]   Rendered home/index.html.erb within layouts/application (0.1ms)
+2017-10-07T11:30:29.181471+00:00 app[web.1]: [3625e2fe-9e2d-4b09-9687-24681d556b00] Completed 200 OK in 1186ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+2017-10-07T11:30:29.470814+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=windsapp.herokuapp.com request_id=940789a6-628f-4d77-a967-35178b038273 fwd="133.3.201.20" dyno=web.1 connect=1ms service=1ms status=304 bytes=48 protocol=https
+2017-10-07T11:30:30.880641+00:00 heroku[router]: at=info method=GET path="/board" host=windsapp.herokuapp.com request_id=a96789f4-6cc3-4ac3-8461-b2dcf0a892ea fwd="133.3.201.20" dyno=web.1 connect=1ms service=9ms status=200 bytes=1337 protocol=https
+2017-10-07T11:30:30.871793+00:00 app[web.1]: [a96789f4-6cc3-4ac3-8461-b2dcf0a892ea] Started GET "/board" for 133.3.201.20 at 2017-10-07 11:30:30 +0000
+2017-10-07T11:30:30.872749+00:00 app[web.1]: [a96789f4-6cc3-4ac3-8461-b2dcf0a892ea] Processing by HomeController#board as HTML
+2017-10-07T11:30:30.873904+00:00 app[web.1]: [a96789f4-6cc3-4ac3-8461-b2dcf0a892ea]   Rendering home/board.html.erb within layouts/application
+2017-10-07T11:30:30.877218+00:00 app[web.1]: [a96789f4-6cc3-4ac3-8461-b2dcf0a892ea]   [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY date DESC[0m
+2017-10-07T11:30:30.877480+00:00 app[web.1]: [a96789f4-6cc3-4ac3-8461-b2dcf0a892ea]   Rendered home/board.html.erb within layouts/application (3.5ms)
+2017-10-07T11:30:30.878435+00:00 app[web.1]: [a96789f4-6cc3-4ac3-8461-b2dcf0a892ea] Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 1.2ms)
+2017-10-07T12:03:52.330863+00:00 heroku[web.1]: Idling
+2017-10-07T12:03:52.331339+00:00 heroku[web.1]: State changed from up to down
+2017-10-07T12:03:53.257951+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2017-10-07T12:03:53.330948+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish
+2017-10-07T12:03:53.337868+00:00 app[web.1]: Exiting
+2017-10-07T12:03:53.337584+00:00 app[web.1]: === puma shutdown: 2017-10-07 12:03:53 +0000 ===
+2017-10-07T12:03:53.337628+00:00 app[web.1]: - Goodbye!
+2017-10-07T12:03:53.571519+00:00 heroku[web.1]: Process exited with status 143
+2017-10-07T13:11:04.202343+00:00 heroku[web.1]: Unidling
+2017-10-07T13:11:04.202628+00:00 heroku[web.1]: State changed from down to starting
+2017-10-07T13:11:04.190957+00:00 heroku[web.1]: Unidling
+2017-10-07T13:11:04.191321+00:00 heroku[web.1]: State changed from down to starting
+2017-10-07T13:11:07.236208+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 55552 -e production`
+2017-10-07T13:11:12.679273+00:00 heroku[web.1]: State changed from starting to up
+2017-10-07T13:11:12.603075+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2017-10-07T13:11:12.603080+00:00 app[web.1]: * Version 3.10.0 (ruby 2.3.4-p301), codename: Russell's Teapot
+2017-10-07T13:11:12.603065+00:00 app[web.1]: => Booting Puma
+2017-10-07T13:11:12.603074+00:00 app[web.1]: => Rails 5.1.4 application starting in production 
+2017-10-07T13:11:12.603188+00:00 app[web.1]: * Listening on tcp://0.0.0.0:55552
+2017-10-07T13:11:12.603683+00:00 app[web.1]: Use Ctrl-C to stop
+2017-10-07T13:11:12.603075+00:00 app[web.1]: Puma starting in single mode...
+2017-10-07T13:11:12.603081+00:00 app[web.1]: * Min threads: 5, max threads: 5
+2017-10-07T13:11:12.603082+00:00 app[web.1]: * Environment: production
+2017-10-07T13:11:13.270536+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=windsapp.herokuapp.com request_id=25017a13-7b94-465f-87ce-c1cb0edd271b fwd="219.97.58.189" dyno=web.1 connect=1ms service=8ms status=304 bytes=48 protocol=https
+2017-10-07T13:11:14.255319+00:00 app[web.1]: [943463f0-f099-4bf5-a61e-3f2cf3c4680a] Started GET "/board" for 219.97.58.189 at 2017-10-07 13:11:14 +0000
+2017-10-07T13:11:14.259148+00:00 app[web.1]: [943463f0-f099-4bf5-a61e-3f2cf3c4680a] Processing by HomeController#board as HTML
+2017-10-07T13:11:14.269337+00:00 app[web.1]: [943463f0-f099-4bf5-a61e-3f2cf3c4680a]   Rendering home/board.html.erb within layouts/application
+2017-10-07T13:11:14.305440+00:00 app[web.1]: [943463f0-f099-4bf5-a61e-3f2cf3c4680a]   [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY date DESC[0m
+2017-10-07T13:11:14.309539+00:00 app[web.1]: [943463f0-f099-4bf5-a61e-3f2cf3c4680a]   Rendered home/board.html.erb within layouts/application (40.1ms)
+2017-10-07T13:11:14.311424+00:00 app[web.1]: [943463f0-f099-4bf5-a61e-3f2cf3c4680a] Completed 200 OK in 52ms (Views: 43.3ms | ActiveRecord: 11.0ms)
+2017-10-07T13:11:14.313522+00:00 heroku[router]: at=info method=GET path="/board" host=windsapp.herokuapp.com request_id=943463f0-f099-4bf5-a61e-3f2cf3c4680a fwd="219.97.58.189" dyno=web.1 connect=1ms service=59ms status=200 bytes=1337 protocol=https
+2017-10-07T13:24:04.773270+00:00 app[web.1]: [03ebd5f9-00b6-4d2a-85f0-948354f1b044] Started GET "/board" for 219.97.58.189 at 2017-10-07 13:24:04 +0000
+2017-10-07T13:24:04.786081+00:00 heroku[router]: at=info method=GET path="/board" host=windsapp.herokuapp.com request_id=03ebd5f9-00b6-4d2a-85f0-948354f1b044 fwd="219.97.58.189" dyno=web.1 connect=0ms service=24ms status=200 bytes=1337 protocol=https
+2017-10-07T13:24:04.776892+00:00 app[web.1]: [03ebd5f9-00b6-4d2a-85f0-948354f1b044] Processing by HomeController#board as HTML
+2017-10-07T13:24:04.779185+00:00 app[web.1]: [03ebd5f9-00b6-4d2a-85f0-948354f1b044]   Rendering home/board.html.erb within layouts/application
+2017-10-07T13:24:04.782125+00:00 app[web.1]: [03ebd5f9-00b6-4d2a-85f0-948354f1b044]   [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY date DESC[0m
+2017-10-07T13:24:04.782402+00:00 app[web.1]: [03ebd5f9-00b6-4d2a-85f0-948354f1b044]   Rendered home/board.html.erb within layouts/application (3.1ms)
+2017-10-07T13:24:04.783757+00:00 app[web.1]: [03ebd5f9-00b6-4d2a-85f0-948354f1b044] Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.9ms)
+2017-10-07T13:24:05.043878+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=windsapp.herokuapp.com request_id=37d80d16-218d-4125-84ea-ad404ad66d52 fwd="219.97.58.189" dyno=web.1 connect=1ms service=3ms status=200 bytes=143 protocol=https
+2017-10-07T14:00:09.468864+00:00 heroku[web.1]: Idling
+2017-10-07T14:00:09.469370+00:00 heroku[web.1]: State changed from up to down
+2017-10-07T14:00:10.264826+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2017-10-07T14:00:10.280929+00:00 app[web.1]: - Gracefully stopping, waiting for requests to finish
+2017-10-07T14:00:10.282915+00:00 app[web.1]: === puma shutdown: 2017-10-07 14:00:10 +0000 ===
+2017-10-07T14:00:10.282947+00:00 app[web.1]: - Goodbye!
+2017-10-07T14:00:10.283589+00:00 app[web.1]: Exiting
+2017-10-07T14:00:10.435578+00:00 heroku[web.1]: Process exited with status 143
+2017-10-07T14:32:28.000000+00:00 app[api]: Build started by user cancer_acropolis@yahoo.co.jp
+2017-10-07T14:32:48.040209+00:00 app[api]: Release v12 created by user cancer_acropolis@yahoo.co.jp
+2017-10-07T14:32:48.040209+00:00 app[api]: Deploy 3b5c055d by user cancer_acropolis@yahoo.co.jp
+2017-10-07T14:32:48.439410+00:00 heroku[web.1]: State changed from down to starting
+2017-10-07T14:32:28.000000+00:00 app[api]: Build succeeded
+2017-10-07T14:32:51.917599+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 8923 -e production`
+2017-10-07T14:32:59.263693+00:00 app[web.1]: => Booting Puma
+2017-10-07T14:32:59.263734+00:00 app[web.1]: => Rails 5.1.4 application starting in production 
+2017-10-07T14:32:59.263735+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2017-10-07T14:32:59.263771+00:00 app[web.1]: Puma starting in single mode...
+2017-10-07T14:32:59.263825+00:00 app[web.1]: * Version 3.10.0 (ruby 2.3.4-p301), codename: Russell's Teapot
+2017-10-07T14:32:59.263885+00:00 app[web.1]: * Min threads: 5, max threads: 5
+2017-10-07T14:32:59.263957+00:00 app[web.1]: * Environment: production
+2017-10-07T14:32:59.264149+00:00 app[web.1]: * Listening on tcp://0.0.0.0:8923
+2017-10-07T14:32:59.264885+00:00 app[web.1]: Use Ctrl-C to stop
+2017-10-07T14:32:59.654900+00:00 heroku[web.1]: State changed from starting to up
+2017-10-07T14:35:33.204248+00:00 heroku[router]: at=info method=GET path="/board" host=windsapp.herokuapp.com request_id=a1294cc1-2303-400e-a5c9-b6e313cb9d3f fwd="219.97.58.189" dyno=web.1 connect=0ms service=66ms status=200 bytes=1337 protocol=https
+2017-10-07T14:35:33.140837+00:00 app[web.1]: [a1294cc1-2303-400e-a5c9-b6e313cb9d3f] Started GET "/board" for 219.97.58.189 at 2017-10-07 14:35:33 +0000
+2017-10-07T14:35:33.154342+00:00 app[web.1]: [a1294cc1-2303-400e-a5c9-b6e313cb9d3f]   Rendering home/board.html.erb within layouts/application
+2017-10-07T14:35:33.144405+00:00 app[web.1]: [a1294cc1-2303-400e-a5c9-b6e313cb9d3f] Processing by HomeController#board as HTML
+2017-10-07T14:35:33.202197+00:00 app[web.1]: [a1294cc1-2303-400e-a5c9-b6e313cb9d3f] Completed 200 OK in 58ms (Views: 49.0ms | ActiveRecord: 13.2ms)
+2017-10-07T14:35:33.194935+00:00 app[web.1]: [a1294cc1-2303-400e-a5c9-b6e313cb9d3f]   [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY date DESC[0m
+2017-10-07T14:35:33.200266+00:00 app[web.1]: [a1294cc1-2303-400e-a5c9-b6e313cb9d3f]   Rendered home/board.html.erb within layouts/application (45.8ms)
+2017-10-07T14:35:33.491261+00:00 heroku[router]: at=info method=GET path="/assets/application-dcfb333542166c7e176ac13945f5c27350627b932d212a870a5a112daf6d4db9.js" host=windsapp.herokuapp.com request_id=b26a76f0-3881-4692-b55d-2529851e4b92 fwd="219.97.58.189" dyno=web.1 connect=0ms service=1ms status=304 bytes=48 protocol=https
+2017-10-07T14:35:33.485206+00:00 heroku[router]: at=info method=GET path="/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" host=windsapp.herokuapp.com request_id=5917bc91-df19-47f7-86f9-47dbca9466ae fwd="219.97.58.189" dyno=web.1 connect=0ms service=2ms status=304 bytes=48 protocol=https
+2017-10-07T14:35:33.713006+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=windsapp.herokuapp.com request_id=ba43bcde-9705-40a9-a47b-2a8ae547b64b fwd="219.97.58.189" dyno=web.1 connect=0ms service=2ms status=200 bytes=143 protocol=https

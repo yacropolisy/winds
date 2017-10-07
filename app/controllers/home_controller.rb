@@ -1,19 +1,20 @@
 class HomeController < ApplicationController
   def index
-
-
+    @msg = 'hello!'
     postdate = '20170712000001'
     flag = 1
     Post.all.each do |p|
       if p.date == postdate
+        @msg = 'kuku'
         if p.hp == 'kyodai'
+          @msg = 'haha'
           flag = 0
           break
         end
       end
     end
     if flag == 1
-      Post.create(hp: 'kyodai', title: 'hogehoge', author: 'yyamada', date: postdate, article: 'hugehuge\nhogehoge' )
+      Post.create!(hp: 'kyodai', title: 'hogehoge', author: 'yyamada', date: postdate, article: 'hugehuge\nhogehoge' )
       @msg = 'mumu'
     end
 
@@ -70,7 +71,7 @@ class HomeController < ApplicationController
         end
       end
       if flag == 1
-        Post.create(hp: doc.title, title: titles[i], author: authors[i], date: convert_date(createds[i]), article: articles[i] )
+        Post.create!(hp: doc.title, title: titles[i], author: authors[i], date: convert_date(createds[i]), article: articles[i] )
       end
     end
 

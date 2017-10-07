@@ -1,0 +1,16 @@
+2017-10-07T14:46:40.424930+00:00 app[web.1]: [6d42f110-3d4b-455c-ba55-c73f8d8c8db3] Started GET "/home" for 219.97.58.189 at 2017-10-07 14:46:40 +0000
+2017-10-07T14:46:40.425660+00:00 app[web.1]: [6d42f110-3d4b-455c-ba55-c73f8d8c8db3] Processing by HomeController#index as HTML
+2017-10-07T14:46:41.431867+00:00 app[web.1]: true
+2017-10-07T14:46:42.229608+00:00 heroku[router]: at=info method=GET path="/home" host=windsapp.herokuapp.com request_id=6d42f110-3d4b-455c-ba55-c73f8d8c8db3 fwd="219.97.58.189" dyno=web.1 connect=1ms service=1802ms status=200 bytes=1397 protocol=https
+2017-10-07T14:46:42.205756+00:00 app[web.1]: "京都大学ウィンドサーフィン部 - 仲良くしましょう。"
+2017-10-07T14:46:42.222446+00:00 app[web.1]: [6d42f110-3d4b-455c-ba55-c73f8d8c8db3]   Rendering home/index.html.erb within layouts/application
+2017-10-07T14:46:42.222652+00:00 app[web.1]: [6d42f110-3d4b-455c-ba55-c73f8d8c8db3]   Rendered home/index.html.erb within layouts/application (0.1ms)
+2017-10-07T14:46:42.223564+00:00 app[web.1]: [6d42f110-3d4b-455c-ba55-c73f8d8c8db3] Completed 200 OK in 1798ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+2017-10-07T14:46:42.558678+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=windsapp.herokuapp.com request_id=5d916d4a-7507-407b-86af-ab6aa725847b fwd="219.97.58.189" dyno=web.1 connect=1ms service=2ms status=304 bytes=48 protocol=https
+2017-10-07T14:46:45.526803+00:00 heroku[router]: at=info method=GET path="/board" host=windsapp.herokuapp.com request_id=d759c854-09a2-43f5-a19d-51493979313b fwd="219.97.58.189" dyno=web.1 connect=1ms service=13ms status=200 bytes=1337 protocol=https
+2017-10-07T14:46:45.511899+00:00 app[web.1]: [d759c854-09a2-43f5-a19d-51493979313b] Started GET "/board" for 219.97.58.189 at 2017-10-07 14:46:45 +0000
+2017-10-07T14:46:45.513778+00:00 app[web.1]: [d759c854-09a2-43f5-a19d-51493979313b] Processing by HomeController#board as HTML
+2017-10-07T14:46:45.515749+00:00 app[web.1]: [d759c854-09a2-43f5-a19d-51493979313b]   Rendering home/board.html.erb within layouts/application
+2017-10-07T14:46:45.519373+00:00 app[web.1]: [d759c854-09a2-43f5-a19d-51493979313b]   [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY date DESC[0m
+2017-10-07T14:46:45.519968+00:00 app[web.1]: [d759c854-09a2-43f5-a19d-51493979313b]   Rendered home/board.html.erb within layouts/application (3.8ms)
+2017-10-07T14:46:45.521063+00:00 app[web.1]: [d759c854-09a2-43f5-a19d-51493979313b] Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.9ms)

@@ -1,0 +1,101 @@
+Started GET "/" for 192.168.33.1 at 2017-10-07 23:44:04 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Post Load (2.3ms)  SELECT "posts".* FROM "posts"
+true
+"京都大学ウィンドサーフィン部 - 仲良くしましょう。"
+  CACHE Post Load (0.0ms)  SELECT "posts".* FROM "posts"
+  CACHE Post Load (0.0ms)  SELECT "posts".* FROM "posts"
+  CACHE Post Load (0.0ms)  SELECT "posts".* FROM "posts"
+  CACHE Post Load (0.0ms)  SELECT "posts".* FROM "posts"
+  CACHE Post Load (0.0ms)  SELECT "posts".* FROM "posts"
+  CACHE Post Load (0.0ms)  SELECT "posts".* FROM "posts"
+  CACHE Post Load (0.1ms)  SELECT "posts".* FROM "posts"
+  CACHE Post Load (0.0ms)  SELECT "posts".* FROM "posts"
+  CACHE Post Load (0.0ms)  SELECT "posts".* FROM "posts"
+  CACHE Post Load (0.0ms)  SELECT "posts".* FROM "posts"
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1164ms (Views: 40.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/board" for 192.168.33.1 at 2017-10-07 23:44:06 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#board as HTML
+  Rendering home/board.html.erb within layouts/application
+  Post Load (4.1ms)  SELECT "posts".* FROM "posts" ORDER BY date DESC
+  Rendered home/board.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 45ms (Views: 38.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/board" for 192.168.33.1 at 2017-10-07 23:45:01 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#board as HTML
+  Rendering home/board.html.erb within layouts/application
+  Post Load (1.8ms)  SELECT "posts".* FROM "posts" ORDER BY date DESC
+  Rendered home/board.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 57ms (Views: 48.8ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 192.168.33.1 at 2017-10-07 23:45:22 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Post Load (3.1ms)  SELECT "posts".* FROM "posts"
+   (0.1ms)  begin transaction
+  SQL (3.8ms)  INSERT INTO "posts" ("hp", "title", "author", "date", "article", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["hp", "kyodai"], ["title", "hogehoge"], ["author", "yyamada"], ["date", "2017-07-12 00:00:01"], ["article", "hugehuge\\nhogehoge"], ["created_at", "2017-10-07 14:45:22.495695"], ["updated_at", "2017-10-07 14:45:22.495695"]]
+   (6.0ms)  commit transaction
+true
+"京都大学ウィンドサーフィン部 - 仲良くしましょう。"
+  Post Load (2.0ms)  SELECT "posts".* FROM "posts"
+   (0.1ms)  begin transaction
+  SQL (4.1ms)  INSERT INTO "posts" ("hp", "title", "author", "date", "article", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["hp", "京都大学ウィンドサーフィン部 - 仲良くしましょう。"], ["title", "江ノ島日記"], ["author", "宮崎"], ["date", "2017-10-07 18:01:07"], ["article", "風が上がり12時半頃にD旗が掲揚され、今日は中風～吹きで3R消化しました。\n江ノ島の大きいうねりに揉まれ、僕はマストとエクステンションが折れ、使用4回のニューセイルが破れました。江島神社に上り、セイルの傷が癒えるようお祈りしてきました。展望台付近から眺める夜景はとても綺麗なのでオススメです。今夜は運営主催のパーティがあるようなので、楽しんできます。\n以下暫定リザルトになります。"], ["created_at", "2017-10-07 14:45:23.446243"], ["updated_at", "2017-10-07 14:45:23.446243"]]
+   (16.2ms)  commit transaction
+  Post Load (2.2ms)  SELECT "posts".* FROM "posts"
+   (0.1ms)  begin transaction
+  SQL (5.5ms)  INSERT INTO "posts" ("hp", "title", "author", "date", "article", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["hp", "京都大学ウィンドサーフィン部 - 仲良くしましょう。"], ["title", "こちら"], ["author", "全日本選手権"], ["date", "2017-10-07 12:10:04"], ["article", "おはようございます。\n今日明日と江ノ島で開催される全日本選手権に京大からは井手さん、神林さん、佐藤さん、新崎、三木、宮崎、八鳥の7人が出場しています。OBの小松さんもテクノプラスでいらっしゃっています。\n12時に最初のレース予告信号の予定でしたが、先ほどAP旗が掲揚されました。\n運営によると、沖は5～10m程の風らしいです。段々と風が落ちてきています。"], ["created_at", "2017-10-07 14:45:23.473354"], ["updated_at", "2017-10-07 14:45:23.473354"]]
+   (19.6ms)  commit transaction
+  Post Load (2.6ms)  SELECT "posts".* FROM "posts"
+   (0.1ms)  begin transaction
+  SQL (7.4ms)  INSERT INTO "posts" ("hp", "title", "author", "date", "article", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["hp", "京都大学ウィンドサーフィン部 - 仲良くしましょう。"], ["title", "9月平日練回数ランキング"], ["author", "掲示板(巽)"], ["date", "2017-10-04 10:47:43"], ["article", "おはようございます。遅くなりましたが、9月の平日練の回数のランキングです。\n合宿や前入り、10時発から昼発までの練習などは考慮していません。\n\n佐藤さん\t15\n新崎さん\t15\n塚本\t15\n小林さん\t14\n伊奈\t14\n田中慶太\t14\n山之内\t14\n井手さん\t13\n松村さん\t13\n八鳥\t13\n深尾\t13\n仮屋さん\t12\n神林さん\t12\n村山さん\t12\n杉原\t12\n嶋﨑\t12\n前田さん\t11\n勝木さん\t11\n前岡さん\t11\n鈴木\t11\n畑村\t11\n柴原\t11\n浅尾さん\t10\n宮﨑さん\t10\n吉野さん\t10\n坂野\t10\n田中健太\t10\n西村\t10\n松本\t10\n中尾\t10\n三木さん\t9\n倭さん\t9\n樋口\t9\n木村\t9\n小八重\t9\n亀嶋\t8\n林\t8\n松田\t8\n沖野\t7\n赤間\t6\n巽\t6\n坂本\t6\n東原\t6\n兵動\t6\n笛木\t6\n奥山\t5\n田崎\t5\n東田\t4\n平松\t4\n望月\t4\n新井\t2\n\n\n松永さん\t5\n定光さん\t3\n神崎さん\t2\n古田さん 1\n蓬莱さん\t1\n相場さん\t1\n谷尻さん\t0\n原村さん\t0\n川崎さん\t0\n武田さん\t0\n塚本さん\t0\n小川さん\t0\n"], ["created_at", "2017-10-07 14:45:23.506895"], ["updated_at", "2017-10-07 14:45:23.506895"]]
+   (9.0ms)  commit transaction
+  Post Load (7.7ms)  SELECT "posts".* FROM "posts"
+   (0.1ms)  begin transaction
+  SQL (5.7ms)  INSERT INTO "posts" ("hp", "title", "author", "date", "article", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["hp", "京都大学ウィンドサーフィン部 - 仲良くしましょう。"], ["title", "10月１日正規練"], ["author", "掲示板係(八島)"], ["date", "2017-10-01 23:17:58"], ["article", "お疲れ様です。\n\n本日は後期正規練二日目でした。\n午前は北の無微、午後から南東のオーバーという極端な1日で、一回生は残念ながら午後から出禁でした。ドン吹きもいつか一緒に乗りたいですね。\nまた今日は、OBの原村さん、神崎さん、こうへいさんが来てくださりました。一回生を見てくださったり、吹きの中マーク付きをしてくださって本当にありがとうございます。\n\n以下、本日の風の詳細とリザルトです。\n\n1R：南東7~8m.s\n2R：南東6~8m.s\n3R：南東8~10m.s\n4R：南東5~8m.s\n\n1.小林さん(4) 4pt（1,2,2,1) cut2\n2.勝木さん(3) 4pt（2,1,1,2) cut2\n3.新崎さん(3) 10pt（3,4,3,6) cut6\n4.鈴木(2) 15pt（5,6,4,10) cut10\n5.前岡さん(3) 18pt（8,3,7,14) cut14\n6.宮崎さん(3) 20pt（10,7,11,3) cut11\n7.井手さん(4) 20pt（9,13,6,5) cut13\n8.仮屋さん(4) 21pt（RET,8,9,4) cut30\n9.浅尾さん(3) 21pt（4,14,10,7) cut14\n10.前田さん(4) 22pt（6,11,5,11) cut11\n11.三木さん(3) 24pt（7,9,13,8) cut13\n12.杉原(2) 27pt（11,10,8,9) cut11\n13.八鳥(2) 34pt（15,5,14,15) cut15\n14.松本(2) 36pt（12,12,12,22) cut22\n15.高瀬さん(3) 41pt（13,F,16,12) cut30\n16.坂野(2) 45pt（17,15,17,13) cut17\n17.深尾(2) 50pt（19,15,18,17) cut19\n18.倭さん(3) 50pt（18,17,15,21) cut21\n19.西村(2) 52pt（14,18,20,20) cut20\n20.亀嶋(2) 53pt（21,16,21,16) cut21\n21.林(2) 59pt（22,21,19,19) cut22\n22.田中健(2) 61pt（20,19,22,23) cut23\n23.樋口(2) 66pt（23,20,23,24) cut24\n24.吉野さん(3) 82pt（F,22,F,F) cut30\n25.村山さん(3) 84pt（24,F,F,F) cut30\n26.赤間(2) 90pt（F,F,F,F) cut30\n27.巽(2) 90pt（F,F,F,F) cut30\n28.畑村(2) 90pt（F,F,F,F) cut30\n29.松村(3) 90pt（F,F,F,F) cut30\n\n以下アンケートです。\n\nQ1.今日は調子が。。。　(5…良い、1…悪い)\n1 □□\n2 □□□□□□\n3 □□□□□□□□□□□□\n4 □□□□\n5\n\nQ2.今日の風は。。。　(5…好き、1…嫌い)\n1 □□□□□\n2 □□□□\n3 □□□□□□□□□□\n4 □□□\n5 □□□\n\nQ3.久しぶりの正規練は。。。\nシビれるぅぅぅ: □□□□□□□\n吹きばっかしじゃ～: □□□\n夏休みの成長を感じた: □□□\n筋肉痛が激しい: □\nもう夏休みは終わりか。。。: □□□□□□□□□□□□□□\nその他: □□□\n　○1日で十分\n　○やっと新井に会えました。\n　　ずっと会いたかった人がいたようですね。\n　○杉原おめでとう\n　　今日で杉原も二十歳になりました。\n\n何か一言。。。\n　○午後ウインドしてない\n　○あした学校ですやん、、\n　○お疲れ様です。\n　○クリアテープセイル使い易すぎ\n　○安全な吹きが欲しいです。\n　○吹きが乗れるようになりたいです。\n　○物足りない\n　○不完全燃焼\n　○プレーニング楽しかったです。\n　○くどいようですが、杉原おめでとう\n　○急に吹くやん\n　○正規練で出艇禁止はつらい\n二日連続の吹きでリグトラが多かったことが印象的な一回生ですが、やはり午後が丸々出禁というのはやりきれないところがあったようです。来週こそは穏やかな風が吹いてほしいでs、いややっぱ吹いてほしい。\n"], ["created_at", "2017-10-07 14:45:23.540025"], ["updated_at", "2017-10-07 14:45:23.540025"]]
+   (16.5ms)  commit transaction
+  Post Load (3.3ms)  SELECT "posts".* FROM "posts"
+   (0.3ms)  begin transaction
+  SQL (5.1ms)  INSERT INTO "posts" ("hp", "title", "author", "date", "article", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["hp", "京都大学ウィンドサーフィン部 - 仲良くしましょう。"], ["title", "9月30日正規練"], ["author", "掲示板係(八島)"], ["date", "2017-09-30 22:55:03"], ["article", "お疲れ様です。\n本日は後期第一回の正規練習でした。\n午前は艇庫と墓場の掃除をし、午後からラウンディングを５本行いました。\n予報通り、正午がすぎてしばらくした2Rから風が上がり、プレーニングレースとなりました。\n今日はうっかり通信制限がかかっていることを忘れていてアンケートを作成できなかったため、明日からまた部員のウインドへの熱い思いをお届けしたいと思います。\n\n今日は吹きということもあり、リグトラの嵐でした。見たことのないセイルの破け方をしている人もいて、セイルがかわいそうでした。\nそして一回生にとっては後期初っ端から厳しい戦いとなりました。\n今日はしっかり休んで明日に備えましょう。\nまた、本日はOBの神崎さんが来てくださりました。一回生を見てくださったり、マーク付きをしてくださって本当にありがとうございます。\n\n以下ラウンディングの詳細とリザルトです。\nポイントの間違いを訂正しました（10/1）\n1R：北西1~4m/s マスパン、リーパンからストパン、アンダー\n2R：北西7~8m/s　プレーニング\n3R：北西8~10m/s　プレーニング\n4R：北西8~10m/s　プレーニング\n5R：北西7~10m/s　プレーニング\n\n1.勝木さん(3) 4.75pt（4,1,1,1,1.75) cut4\n2.佐藤さん(4) 8pt（2,F,2,2,2) cut50\n3.小林さん(4) 10pt（5,3,3,3,1) cut5\n4.三木さん(3) 17pt（1,5,5,6,8) cut8\n5.鈴木(2) 21pt（14,2,4,12,3) cut14\n6.新崎さん(3) 26pt（3,14,13,5,5) cut14\n7.宮崎さん(3) 26pt（15,6,7,9,4) cut15\n8.仮屋さん(4) 28pt（8,10,9,4,7) cut10\n9.井手さん(4) 31pt（17,4,6,11,10) cut17\n10.八鳥(2) 32pt（11,5,14,7,9) cut14\n11.前岡さん(3) 35pt（10,12,11,8,6) cut12\n12.杉原(2) 37pt（13,9,8,9,11) cut13\n13.高瀬さん(3) 44pt（6,8,18,17,13) cut18\n14.倭さん(3) 46pt（9,13,12,12,F) cut50\n15.坂野(2) 53pt（12,16,15,14,12) cut16\n16.深尾(2) 63pt（16,15,F,15,17) cut50\n17.亀嶋(2) 64pt（21,17,17,16,14) cut21\n18.田中健(2) 71pt（22,18,19,19,15) cut22\n19.西村(2) 75pt（19,20,21,18,18) cut21\n20.巽(2) 80pt（27,21,22,21,16) cut27\n21.林(2) 80pt（18,19,20,23,RET) cut50\n22.松村さん(3) 109pt（20,F,F,20,19) cut50\n23.畑村(2) 115pt（23,F,F,22,20) cut50\n24.浅尾さん(3) 117pt（RET,7,10,RET,RET) cut50\n25.松本(2) 118pt（7,11,RET,RET,RET) cut50\n26.東原(1) 132.5pt（24,22,36.5,F,F) cut50\n27.村山さん(3) 151pt（28,23,F,F,F) cut50\n28.吉野さん(3) 152pt（29,F,23,F,F) cut50\n29.樋口(2) 175pt（25,F,RET,RET,RET) cut50\n30.赤間(2) 176pt（26,F,F,F,F) cut50\n31.沖野(1) 180pt（30,F,F,F,F) cut50\n32.中尾(1) 181pt（31,F,F,F,F) cut50\n33.塚本(1) 182pt（32,F,F,F,F) cut50\n34.山之内(1) 183pt（33,F,F,F,F) cut50\n35.木村(1) 184pt（34,F,F,F,F) cut50\n36.奥山(1) 185pt（35,F,F,F,F) cut50\n37.田崎(1) 186pt（36,F,F,F,F) cut50\n38.小八重(1) 187pt（37,F,F,F,F) cut50\n39.坂本(1) 188pt（38,F,F,F,F) cut50\n40.田中慶(1) 189pt（39,F,F,F,F) cut50\n41.伊奈(1) 190pt（40,F,F,F,F) cut50\n42.東田(1) 191pt（41,F,F,F,F) cut50\n43.松田(1) 192pt（42,F,F,F,F) cut50\n44.新井(1) 200pt（F,F,F,F,F) cut50\n45.柴原(1) 200pt（F,F,F,F,F) cut50\n46.嶋崎(1) 200pt（F,F,F,F,F) cut50\n47.平松(1) 200pt（F,F,F,F,F) cut50\n48.笛木(1) 200pt（F,F,F,F,F) cut50\n49.望月(1) 200pt（F,F,F,F,F) cut50"], ["created_at", "2017-10-07 14:45:23.571648"], ["updated_at", "2017-10-07 14:45:23.571648"]]
+   (20.1ms)  commit transaction
+  Post Load (2.6ms)  SELECT "posts".* FROM "posts"
+   (0.1ms)  begin transaction
+  SQL (5.1ms)  INSERT INTO "posts" ("hp", "title", "author", "date", "article", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["hp", "京都大学ウィンドサーフィン部 - 仲良くしましょう。"], ["title", "お疲れ様です"], ["author", "井手"], ["date", "2017-09-25 08:55:19"], ["article", "お騒がせしました。\n本当にすみません。\n本戦ではしっかり走ります。\nあと皆さん仲良くして下さい。"], ["created_at", "2017-10-07 14:45:23.606640"], ["updated_at", "2017-10-07 14:45:23.606640"]]
+   (5.3ms)  commit transaction
+  Post Load (2.6ms)  SELECT "posts".* FROM "posts"
+   (0.1ms)  begin transaction
+  SQL (6.6ms)  INSERT INTO "posts" ("hp", "title", "author", "date", "article", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["hp", "京都大学ウィンドサーフィン部 - 仲良くしましょう。"], ["title", "皆さん"], ["author", "お疲れ様"], ["date", "2017-09-24 19:57:31"], ["article", "とりわけ井手秀と仲が良いわけではありませんが、井手秀が通ってて心底安心しました。"], ["created_at", "2017-10-07 14:45:23.627726"], ["updated_at", "2017-10-07 14:45:23.627726"]]
+   (18.8ms)  commit transaction
+  Post Load (7.2ms)  SELECT "posts".* FROM "posts"
+   (0.1ms)  begin transaction
+  SQL (4.1ms)  INSERT INTO "posts" ("hp", "title", "author", "date", "article", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["hp", "京都大学ウィンドサーフィン部 - 仲良くしましょう。"], ["title", "関選2戦リザルト"], ["author", "掲示板係(巽)"], ["date", "2017-09-24 18:52:16"], ["article", "お疲れ様です。台風により、1週間遅れて9/23,24に新舞子にて、関西選手権第2戦(インカレ予選)が行われました。\n2日間、レース運営をして下さった、前地さんをはじめ、OBの方々、マネージャーの方々、その他レースを運営して下さった方々、ありがとうございました。\nまた、応援に来て下さった村中さん、ありがとうございました。\n今回のレースの風向は\n1R目 南~南西 1~5m\n2R目 西~北西 4~6m\n3R目 西~北西 3~5m\n4R目 西~北西3~5m\n5R目 南南西 1~2m\n6R目 南南西 2~3m\nでした。\n今大会は沖縄でのインカレ個人戦の予選を兼ねており、京大からはメンズ15人、レディース5人が見事、出場権を獲得致しました。おめでとうございます。\nよって、京大からはシードの佐藤さんを含め、21名がインカレ個人戦に出場致します。\n\n以下、リザルトです。敬称は略させて頂きます。\n【団体】\n1. 同志社大学 (久保、宮崎、瀧宮) (27,21,54,16,39,66) cut66/157pt\n2. 京都大学 (勝木、三木、新崎) (70,37,36,38,19,43) cut70/173pt\n3. 関西学院大学 (坂東、谷川、尾關) (57,65,35,30,109,55) cut109/242pt\n\n【メンズ】\n1. (京都) 勝木太陽 (1,3,3,8,2,1) cut8/10pt\n2. (滋賀県立) 福永康倖 (3,9,1,7,1,4) cut9/16pt\n3. (同志社) 久保恒一郎 (2,1,34,2,4,12) cut34/21pt\n4. (同志社) 宮崎貴大 (7,4,2,5,9,26) cut26/27pt\n5. (大阪) 本多俊喜 (5,11,5,1,50,10) cut50/32pt\n6. (京都) 三木豪士 (9,12,4,3,7,19) cut19/35pt\n\n【レディース】\n1. (立命館) 島智子 (10,10,25,6,27,27) cut27/78pt\n2. (同志社) 山内美佳 (15,35,11,31,34,35) cut35/126pt\n3. (滋賀県立) 不破有理子 (31,45,22,34,59,21) cut59/153pt\n\n\n\n8. 小林 (6,6,10,22,20,2) cut22/44pt\n17.(16) 新崎 (60,22,29,27,10,23) cut60/101pt\n24.(22) 前田 (62,5,32,18,32,42) cut62/129pt\n25.(23) 高瀬 (11,49,45,21,18,38) cut49/133pt\n28.(26) 鈴木 (51,23,26,29,95,20) cut95/149pt\n33.(30) 宮崎 (78,54,23,35,3,49) cut78/164pt\n41.(38) 仮屋 (107,34,46,51,17,47) cut107/195pt\n43.(40) 前岡 (27,74,75,36,55,6) cut75/198pt\n46.(43) 井手 (74,56,52,59,31,9) cut74/207pt\n49.(46) 杉原 (71,36,39,46,72,33) cut72/225pt\n50.(47) 浅尾 (56,62,68,72,15,25) cut72/226pt\n51.(48) 八鳥 (76,29,73,60,14,55) cut76/231pt\n52.(◆4) 神林 (75,37,35,30,76,60) cut76/237pt\n54.(50) 深尾 (54,77,54,44,38,50) cut77/240pt\n＊メンズインカレボーダー＊\n61.(55) 松本 (53,50,55,62,68,56) cut68/276pt\n62.(◆7) 倭 (102,32,49,68,46,81) cut102/276pt\n64.(57) 亀嶋 (110,71,63,61,30,52) cut110/277pt\n71.(61) 林 (39,76,92,86,33,80) cut92/314pt\n77.(◆13) 吉野 (96,81,108,53,61,63) cut108/354pt\n78.(65) 坂野 (122,RDG75,84,66,77,61) cut122/363pt\n89.(73) 巽 (77,111,116,102,47,79) cut116/416pt\n91.(75) 田中 (108,110,109,99,70,41) cut110/427pt\n94.(◆19) 畑村 (104,88,82,74,124,84) cut124/432pt\n98.(◆22) 西村 (100,80,89,100,84,105) cut105/453pt\n＊レディースインカレボーダー＊\n111.(◆29) 村山 (121,109,85,80,114,118) cut121/506pt\n113.(◆31) 松村 (112,115,121,112,89,82) cut121/510pt\n126.(◆37) 樋口 (133,97,130,131,116,114) cut133/588pt\n138.(◆42) 赤間 (131,DNF,134,135,128,127) cut149/655pt\n"], ["created_at", "2017-10-07 14:45:23.668207"], ["updated_at", "2017-10-07 14:45:23.668207"]]
+   (23.1ms)  commit transaction
+  Post Load (3.8ms)  SELECT "posts".* FROM "posts"
+   (0.1ms)  begin transaction
+  SQL (3.5ms)  INSERT INTO "posts" ("hp", "title", "author", "date", "article", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["hp", "京都大学ウィンドサーフィン部 - 仲良くしましょう。"], ["title", "関選2戦最終リザルト"], ["author", "掲示板係(巽)"], ["date", "2017-09-24 15:55:33"], ["article", "お疲れ様です。インカレ予選が終わりました。メンズは深尾までが、レディースは京大では西村までがインカレの権利を獲得しました。"], ["created_at", "2017-10-07 14:45:23.711392"], ["updated_at", "2017-10-07 14:45:23.711392"]]
+   (5.4ms)  commit transaction
+  Post Load (2.9ms)  SELECT "posts".* FROM "posts"
+   (0.1ms)  begin transaction
+  SQL (5.9ms)  INSERT INTO "posts" ("hp", "title", "author", "date", "article", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["hp", "京都大学ウィンドサーフィン部 - 仲良くしましょう。"], ["title", "(無題)"], ["author", "たいよう"], ["date", "2017-09-24 11:14:54"], ["article", "メンズ57位、レディース102がラインです"], ["created_at", "2017-10-07 14:45:23.730879"], ["updated_at", "2017-10-07 14:45:23.730879"]]
+   (15.2ms)  commit transaction
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1341ms (Views: 61.4ms | ActiveRecord: 256.8ms)
+
+
+Started GET "/board" for 192.168.33.1 at 2017-10-07 23:45:26 +0900
+Cannot render console from 192.168.33.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#board as HTML
+  Rendering home/board.html.erb within layouts/application
+  Post Load (2.7ms)  SELECT "posts".* FROM "posts" ORDER BY date DESC
+  Rendered home/board.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 72ms (Views: 64.8ms | ActiveRecord: 2.7ms)
+
