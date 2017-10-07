@@ -1,0 +1,16 @@
+2017-10-07T15:12:23.131094+00:00 app[web.1]: [ee46acd9-96ad-4dad-a116-a92f87a5af37] Started GET "/" for 219.97.58.189 at 2017-10-07 15:12:23 +0000
+2017-10-07T15:12:23.139613+00:00 app[web.1]: [ee46acd9-96ad-4dad-a116-a92f87a5af37] Processing by HomeController#index as HTML
+2017-10-07T15:12:24.379101+00:00 app[web.1]: true
+2017-10-07T15:12:25.223096+00:00 heroku[router]: at=info method=GET path="/" host=windsapp.herokuapp.com request_id=ee46acd9-96ad-4dad-a116-a92f87a5af37 fwd="219.97.58.189" dyno=web.1 connect=3ms service=2097ms status=200 bytes=1397 protocol=https
+2017-10-07T15:12:25.188277+00:00 app[web.1]: "京都大学ウィンドサーフィン部 - 仲良くしましょう。"
+2017-10-07T15:12:25.215774+00:00 app[web.1]: [ee46acd9-96ad-4dad-a116-a92f87a5af37] Completed 200 OK in 2076ms (Views: 9.2ms)
+2017-10-07T15:12:25.212560+00:00 app[web.1]: [ee46acd9-96ad-4dad-a116-a92f87a5af37]   Rendering home/index.html.erb within layouts/application
+2017-10-07T15:12:25.213472+00:00 app[web.1]: [ee46acd9-96ad-4dad-a116-a92f87a5af37]   Rendered home/index.html.erb within layouts/application (0.8ms)
+2017-10-07T15:12:25.764088+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=windsapp.herokuapp.com request_id=1c919b8d-a721-4f4a-9bcc-1f95ce56918f fwd="219.97.58.189" dyno=web.1 connect=1ms service=23ms status=200 bytes=143 protocol=https
+2017-10-07T15:12:29.302567+00:00 app[web.1]: [abe87762-3661-4215-992b-31443a6d3c1b] Processing by HomeController#board as HTML
+2017-10-07T15:12:29.301379+00:00 app[web.1]: [abe87762-3661-4215-992b-31443a6d3c1b] Started GET "/board" for 219.97.58.189 at 2017-10-07 15:12:29 +0000
+2017-10-07T15:12:29.305950+00:00 app[web.1]: [abe87762-3661-4215-992b-31443a6d3c1b]   Rendering home/board.html.erb within layouts/application
+2017-10-07T15:12:29.377976+00:00 app[web.1]: [abe87762-3661-4215-992b-31443a6d3c1b]   Rendered home/board.html.erb within layouts/application (71.9ms)
+2017-10-07T15:12:29.372418+00:00 app[web.1]: [abe87762-3661-4215-992b-31443a6d3c1b]   [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY date DESC[0m
+2017-10-07T15:12:29.379532+00:00 app[web.1]: [abe87762-3661-4215-992b-31443a6d3c1b] Completed 200 OK in 77ms (Views: 73.8ms | ActiveRecord: 21.4ms)
+2017-10-07T15:12:29.383367+00:00 heroku[router]: at=info method=GET path="/board" host=windsapp.herokuapp.com request_id=abe87762-3661-4215-992b-31443a6d3c1b fwd="219.97.58.189" dyno=web.1 connect=2ms service=83ms status=200 bytes=1337 protocol=https
