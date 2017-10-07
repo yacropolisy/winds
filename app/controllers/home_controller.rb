@@ -13,9 +13,11 @@ class HomeController < ApplicationController
         end
       end
     end
+    p flag
     if flag == 1
       Post.create!(hp: 'kyodai', title: 'hogehoge', author: 'yyamada', date: postdate, article: 'hugehuge\nhogehoge' )
       @msg = 'mumu'
+      p mumu
     end
 
     require 'open-uri'
