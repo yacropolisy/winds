@@ -1,3 +1,14 @@
-<h1>Title</h1>
-<p>Find me in app/views/home/st.html.erb</p>
+<h1>WindInfo</h1>
+<p>こんにちは</p>
 <p><%= @msg %></p>
+<% str = simple_format("ahoboke\nkasu") %>
+<p><%= str %></p>
+<% for i in 0..3 do %>
+<h2><%= @titles[i] %></h2>
+<span><%= @authors[i]%></span>
+<span><%= @createds[i]%></span>
+<span><%= @createds[i]%></span>
+<span><%= simple_format(@articles[i])%></span>
+
+
+<% end %>
