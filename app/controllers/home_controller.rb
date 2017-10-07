@@ -1,16 +1,12 @@
 class HomeController < ApplicationController
   def index
-    @msg = 'hello!'
-    @msg2 = 'hoge'
-    @posts = Post.all.order('date DESC')
+
 
     postdate = '20170712000001'
     flag = 1
     Post.all.each do |p|
       if p.date == postdate
-        @msg = 'kuku'
         if p.hp == 'kyodai'
-          @msg = 'haha'
           flag = 0
           break
         end
@@ -78,6 +74,10 @@ class HomeController < ApplicationController
       end
     end
 
+  end
+
+  def board
+    @posts = Post.all.order('date DESC')
   end
 
   def convert_date(text)

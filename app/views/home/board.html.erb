@@ -1,0 +1,9 @@
+<h1>WindInfo</h1>
+
+<% for i in 0..3 do %>
+<h2><%= @posts[i].title %></h2>
+<span><%= @posts[i].author%></span>
+<span><%= @posts[i].date%></span>
+<span><%= simple_format(@posts[i].article)%></span>
+
+<% end %>
