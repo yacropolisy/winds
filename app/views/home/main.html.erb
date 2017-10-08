@@ -1,0 +1,105 @@
+<div id="tf-home">
+    <div class="overlay">
+        <div id="sticky-anchor"></div>
+        <nav id="tf-menu" class="navbar navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <p class="navbar-brand logo">Awesomeness</p>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">Top</a></li>
+                    <li><a href="/main">Reload</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="container">
+            <div class="content">
+                <h1>Wind Info</h1>
+                <h3>Windsurfing Information</h3>
+                <br>
+                <a href="/main" class="btn btn-primary my-btn">Reload</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="tf-why-me">
+    <div class="overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Informations</h3>
+                    <br>
+                    <ul class="list-inline why-me">
+                      <div class="col-sm-8 blog-main">
+                        <% @posts.each do |post|%>
+
+                        <div class="blog-post">
+                          <h2 class="blog-post-title" style=<%= post.color %>><%= post.title %></h2>
+                          <p class="blog-post-meta"><%= post.date%> by <%= post.author%></p>
+
+                          <p><%= simple_format(post.article)%></p>
+
+                        </div><!-- /.blog-post -->
+                        <% end %>
+                      </div><!-- /.blog-main -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<nav id="tf-footer">
+    <div class="container">
+         <div class="pull-left">
+            <p>2015 © Awesomess. All Rights Reserved. Designed and Coded by <a href="https://dribbble.com/jennpereira">Jenn</a> for <a href="https://themeforces.com">ThemeForces.Com</a></p>
+        </div>
+        <div class="pull-right">
+            <ul class="social-media list-inline">
+                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                <li><a href="#"><span class="fa fa-pinterest"></span></a></li>
+                <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
+                <li><a href="#"><span class="fa fa-behance"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../assets/javascriptsjquery.1.11.1.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="../../assets/javascriptsbootstrap.js"></script>
+
+<!-- Javascripts
+================================================== -->
+<script type="text/javascript" src="../../assets/javascriptsmain.js"></script>
+
+<div class="container">
+
+  <div class="row">
+
+
+  </div>
+</div>

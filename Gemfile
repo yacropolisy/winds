@@ -7,6 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'twitter'
 gem 'bootstrap-sass'
 gem 'robotex'
 gem 'rails_12factor', group: :production

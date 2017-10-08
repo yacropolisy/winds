@@ -1,91 +1,112 @@
+require 'open-uri'
+require 'nokogiri'
+require 'robotex'
+require "twitter"
+
+
+
 class HomeController < ApplicationController
   def index
-    @msg = 'hello!'
-    postdate = '20170712000001'
-    flag = 1
-    p 'hurahura'
-    p flag
-    Post.all.each do |p|
-      if p.date == postdate
-        @msg = 'kuku'
-        if p.hp == 'kyodai'
-          @msg = 'haha'
-          flag = 0
-          break
-        end
-      end
-    end
-    p flag
-    if flag == 1
-      Post.create!(hp: 'kyodai', title: 'hogehoge', author: 'yyamada', date: postdate, article: 'hugehuge\nhogehoge' )
-      @msg = 'mumu'
-      p mumu
-    end
-
-    p 'create'
-    Post.create!(hp: 'kyodai', title: 'hogehoge', author: 'yyamada', date: postdate, article: 'hugehuge\nhogehoge' )
-
-    require 'open-uri'
-    require 'nokogiri'
-    require 'robotex'
-    robotex = Robotex.new
-
-    # スクレイピング先のURL
-    url = 'http://6243.teacup.com/wind12/bbs'
-    p robotex.allowed?(url)
-
-    charset = nil
-    html = open(url) do |f|
-      charset = f.charset # 文字種別を取得
-      f.read # htmlを読み込んで変数htmlに渡す
-    end
-    # htmlをパース(解析)してオブジェクトを作成
-    doc = Nokogiri::HTML.parse(html, nil, charset)
-    p doc.title
-    titles = []
-    authors = []
-    createds = []
-    articles = []
-
-    doc.css('.Kiji_Title').each do |title|
-      titles.push(title.text)
-    end
-    @titles = titles
-
-    doc.css('.Kiji_Author').each do |author|
-      authors.push(author.text)
-    end
-    @authors = authors
-
-    doc.css('.Kiji_Created').each do |created|
-      createds.push(created.text)
-    end
-    @createds = createds
-
-    doc.css('.Kiji_Article').each do |article|
-      articles.push(article.text)
-    end
-    @articles = articles
-
-    titles.size.times do |i|
-      flag = 1
-      Post.all.each do |p|
-        if p.date == convert_date(createds[i])
-          if p.hp == doc.title
-            flag = 0
-            break
-          end
-        end
-      end
-      if flag == 1
-        Post.create!(hp: doc.title, title: titles[i], author: authors[i], date: convert_date(createds[i]), article: articles[i] )
-      end
-    end
-
+    survey
   end
 
-  def board
+  def main
     @posts = Post.all.order('date DESC')
+    survey
+  end
+
+  def survey
+    Thread.start do
+      #スクレイピング
+      p 'scraping'
+
+      robotex = Robotex.new
+      # スクレイピング先のURL
+      url = 'http://6243.teacup.com/wind12/bbs'
+      if robotex.allowed?(url)
+        charset = nil
+        html = open(url) do |f|
+          charset = f.charset # 文字種別を取得
+          f.read # htmlを読み込んで変数htmlに渡す
+        end
+        # htmlをパース(解析)してオブジェクトを作成
+        doc = Nokogiri::HTML.parse(html, nil, charset)
+        p doc.title
+
+        hps = []
+        titles = []
+        authors = []
+        createds = []
+        articles = []
+        colors = []
+
+        doc.css('.Kiji_Title').each do |title|
+          hps.push(doc.title)
+          titles.push(title.text)
+          colors.push('background-color:#be7bd4;')
+        end
+
+        doc.css('.Kiji_Author').each do |author|
+          authors.push(author.text)
+        end
+
+        doc.css('.Kiji_Created').each do |created|
+          createds.push(convert_date(created.text))
+        end
+
+        doc.css('.Kiji_Article').each do |article|
+          articles.push(article.text)
+        end
+      end
+
+      #twitter API
+      p "twitter api"
+      #初期設定
+      client = Twitter::REST::Client.new do |config|
+        config.consumer_key = "tMU83Elbd784Ed3oPPDn54bW4"
+        config.consumer_secret = "Ko5VeAy4rtuza6vSqvbZ3VeBe4BJLA1Avr9vCqB7dcqyPQMAZp"
+        config.access_token = "1315936560-UihYbqt29N5xdLsu2zFJHM3xontjX7ivTKgvwD2"
+        config.access_token_secret = "hhlmMpTwL8rVx0smf7Ucr98vZyCbjscdBDz0iAgOl3EDI"
+      end
+      # 特定ユーザのtimeline取得
+      account = client.user("doshisha3551").screen_name
+      username = client.user("doshisha3551").name
+      client.user_timeline("doshisha3551").each do |timeline|
+        createds.push(client.status(timeline.id).created_at.to_s)
+        articles.push(client.status(timeline.id).text)
+        hps.push(username + " twitter")
+        titles.push(username)
+        authors.push(account)
+        colors.push('background-color:#2da1e0;')
+      end
+      #dbに登録
+      p 'create posts'
+      titles.size.times do |i|
+        flag = 1
+        Post.all.each do |p|
+          if p.date == createds[i]
+            if p.hp == hps[i]
+              flag = 0
+              break
+            end
+          end
+        end
+        if flag == 1
+          Post.create!(hp: hps[i], title: titles[i], author: authors[i], date: createds[i], article: articles[i], color: colors[i] )
+          p 'created'
+        end
+      end
+      #古いpostsの削除
+      p 'delete posts'
+      a_month = 60 * 60 * 24 * 30
+      expiredate = Time.now - a_month
+
+      Post.all.each do |p|
+        if p.date < expiredate
+          p.destroy
+        end
+      end
+    end
   end
 
   def convert_date(text)

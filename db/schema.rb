@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20171007065807) do
     t.string "author"
     t.datetime "date"
     t.text "article"
+    t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

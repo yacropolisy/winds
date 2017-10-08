@@ -6,6 +6,7 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.string :author
       t.timestamp :date
       t.text :article
+      t.string :color
 
       t.timestamps
     end
