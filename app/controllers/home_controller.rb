@@ -3,6 +3,8 @@ class HomeController < ApplicationController
     @msg = 'hello!'
     postdate = '20170712000001'
     flag = 1
+    p 'hurahura'
+    p flag
     Post.all.each do |p|
       if p.date == postdate
         @msg = 'kuku'
@@ -19,6 +21,9 @@ class HomeController < ApplicationController
       @msg = 'mumu'
       p mumu
     end
+
+    p 'create'
+    Post.create!(hp: 'kyodai', title: 'hogehoge', author: 'yyamada', date: postdate, article: 'hugehuge\nhogehoge' )
 
     require 'open-uri'
     require 'nokogiri'
