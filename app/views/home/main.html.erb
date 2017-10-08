@@ -47,7 +47,7 @@
                         <% @posts.each do |post|%>
 
                         <div class="blog-post">
-                          <h2 class="blog-post-title" style=<%= post.color %>><%= post.title %></h2>
+                          <h3 class="blog-post-title" style=<%= post.color %>><%= post.title %></h3>
                           <p class="blog-post-meta"><%= post.date%> by <%= post.author%></p>
 
                           <p><%= simple_format(post.article)%></p>
